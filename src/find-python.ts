@@ -73,7 +73,7 @@ function usePyPy(majorVersion: 2 | 3, architecture: string): void {
   // On Linux and macOS, the Python interpreter is in 'bin'.
   // On Windows, it is in the installation root.
   const pythonLocation = IS_WINDOWS ? installDir : _binDir;
-  core.exportVariable('pythonLocation', pythonLocation);
+  // core.exportVariable('pythonLocation', pythonLocation);
 
   core.addPath(installDir);
   core.addPath(_binDir);
