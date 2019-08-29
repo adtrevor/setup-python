@@ -1,5 +1,5 @@
-name: Main workflow
-on: [push]
+name: new workflow
+on: [pull_request, push]
 jobs:
   run:
     name: Run
