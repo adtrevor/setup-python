@@ -1,4 +1,5 @@
 import io = require('@actions/io');
+import exec = require('@actions/exec');
 import fs = require('fs');
 import path = require('path');
 
@@ -54,5 +55,6 @@ describe('Finder tests', () => {
     fs.writeFileSync(`${pythonDir}.complete`, 'hello');
     // This will throw if it doesn't find it in the cache (because no such version exists)
     await finder.findPythonVersion('pypy2', 'x64');
+    await exec.exec('python', ['--version']);
   });
 });
