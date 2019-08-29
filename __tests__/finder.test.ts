@@ -55,6 +55,6 @@ describe('Finder tests', () => {
     fs.writeFileSync(`${pythonDir}.complete`, 'hello');
     // This will throw if it doesn't find it in the cache (because no such version exists)
     await finder.findPythonVersion('pypy2', 'x64');
-    // await exec.exec('python', ['--version']);
+    await exec.exec('python', ['--version']);
   });
 });
